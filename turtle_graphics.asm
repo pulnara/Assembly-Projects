@@ -9,18 +9,18 @@ data segment
 	args_lengths		db 		20 dup (?)														
 	input_bytes 		db 		0h							; liczba bajtow wprowadzonych w linii komend	
 	iternum			db		?
-	len				db 		?
-	no_args			db      "Blad: nie podano argumentow.$"
+	len			db 		?
+	no_args			db      	"Blad: nie podano argumentow.$"
 	not_en 			db 		"Blad: podano za malo argumentow. Odpowiednia ilosc: 2.$"	
 	too_many		db 		"Blad: podano za duzo argumentow. Odpowiednia ilosc: 2.$"
 	iternum_len		db		"Blad: pierwszy argument (liczba iteracji 1-systemu) powinien byc liczba calkowita z przedzialu [1; 4].$"
 	len_len			db		"Blad: drugi argument (dlugosc pojedynczego odcinka krzywej) powinien byc liczba calkowita z przedzialu [1; 25].$"
 	string			db		2048 dup ('$') 		; przy maksymalnie 4 iteracjach max dlugosc lancucha znakow to 1792:
-												; Nr iter.	| Liczba liter	| Liczba "F"
-												;    1.		| 	   28		|	  12
-												;	 2. 	|	   112		|	  48
-												; 	 3.		| 	   448		|     192
-												;	 4.		|	   1792		|     768
+												; 	Nr iter.	| Liczba liter	| Liczba "F"
+												;    	1.		| 	   28		|     12
+												;	2. 		|	   112		|     48
+												; 	3.		| 	   448		|     192
+												;	4.		|	   1792		|     768
 	intx			dw		20
 	inty			dw		20
 	three 			dw		3d 
