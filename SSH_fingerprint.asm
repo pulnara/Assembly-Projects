@@ -5,7 +5,7 @@
 
 data segment
 	
-	no_args			db      "Blad: nie podano argumentow.$"
+	no_args			db      	"Blad: nie podano argumentow.$"
 	not_en 			db 		"Blad: podano za malo argumentow. Odpowiednia ilosc: 2.$"	
 	too_many		db 		"Blad: podano za duzo argumentow. Odpowiednia ilosc: 2.$"
 	a1_bad 			db 		"Blad: pierwszy argument jest nieprawidlowy. Dopuszczalny jest jeden znak: 0/1.$"	
