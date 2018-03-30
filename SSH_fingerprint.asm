@@ -12,12 +12,12 @@ data segment
 	a2_bad			db		"Blad: klucz jest nieprawidlowy. Poprawny zapis w kodzie szesnastkowym to 32 znaki a-f, 0-9.$"
 	
 	
-	buf				db 		150 dup ('$')				; tablica na dane wejsciowe, maks 150 znakow parametrow
-	num_of_args 	db		0h							; liczba wprowadzonych argumentow
+	buf			db 		150 dup ('$')				; tablica na dane wejsciowe, maks 150 znakow parametrow
+	num_of_args 		db		0h							; liczba wprowadzonych argumentow
 	which_vers		db		?							; flaga w ktorej wersji ma pracowac program - oryginalnej czy z modyfikacja (oryginalna 30h - '0' w tabeli ASCII, 
 														; zmodyfikowana 31h - '1' w tabeli ASCII)
 														
-	key				db		16 dup (?)					; tablica na 16 bajtow przekonwertowanego klucza 
+	key			db		16 dup (?)					; tablica na 16 bajtow przekonwertowanego klucza 
 	
 	chessboard		db		153 dup	(0)					; tabela przechowujaca info o polach 'szachownicy', ktore bedzie odwiedzac goniec/wieza - 
 														; liczba odwiedzin (na poczatku 0) -> konkretne znaczki z tabeli 'symbols'
@@ -33,9 +33,9 @@ data segment
 	top2 			db 		"+--[ RSA 1024]----+$"
 	statement		db		"ASCII-art tego klucza wyglada tak:$"
 	
-	args_offsets	db 		20 dup (?)					; tabele: offsetow, dlugosci argumentow									
-	args_lengths	db 		20 dup (?)														
-	input_bytes 	db 		?							; liczba bajtow wprowadzonych w linii komend								
+	args_offsets		db 		20 dup (?)					; tabele: offsetow, dlugosci argumentow									
+	args_lengths		db 		20 dup (?)														
+	input_bytes 		db 		?							; liczba bajtow wprowadzonych w linii komend								
 	
 data ends
 
