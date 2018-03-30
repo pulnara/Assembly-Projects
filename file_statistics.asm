@@ -4,7 +4,7 @@ buf_size equ 1000d		; stala
 
 data segment
 	
-	no_args			db      "Blad: nie podano argumentow.$"
+	no_args			db      	"Blad: nie podano argumentow.$"
 	not_en 			db 		"Blad: podano za malo argumentow. Odpowiednia ilosc: 2.$"	
 	too_many		db 		"Blad: podano za duzo argumentow. Odpowiednia ilosc: 2.$"
 	v0_info			db		"Weryfikacja, czy plik wejsciowy zawiera poprawne znaki:$"
@@ -40,8 +40,8 @@ data segment
 	sentences		dw		0d							; liczba zdan
 	
 	
-	buf				db 		150 dup (0)				; tablica na dane wejsciowe, maks 150 znakow parametrow
-	num_of_args 	db		0h						; liczba wprowadzonych argumentow
+	buf			db 		150 dup (0)				; tablica na dane wejsciowe, maks 150 znakow parametrow
+	num_of_args 		db		0h						; liczba wprowadzonych argumentow
 	which_vers		db		?						; zmienna-flaga - ktora wersje programu realizujemy 
 	input_file		dw		?						
 	output_file		dw		?
